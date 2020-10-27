@@ -1,7 +1,5 @@
 html,
 body {
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 100%;
 }
@@ -17,22 +15,23 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #03080a;
+  background: #ffffff;
   color: black;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 .container {
   height: 100%;
-  width: 50%;
-  padding: 20px;
+  width: 50vw;
+  padding: 5%;
 }
 
 .container h2 {
   display: flex;
-  width: 80%;
-  color: #87bb34;
-  font-size: 36px;
+  justify-content: center;
+  width: 50vw;
+  color: #000;
+  font-size: 2vw;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -41,11 +40,13 @@ h2 {
 }
 
 .container .row100 {
+  border: solid 3px #87bb34;
+  padding: 5%;
   position: relative;
   width: 100%;
   display: grid;
   margin: 0px;
-  grid-template-columns: repeat(auto-fit, minmax(2000px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(2000px, 1fr)); */
 }
 
 .container .row100 .col {
@@ -59,7 +60,7 @@ h2 {
 .container .row100 .inputBox {
   position: relative;
   width: 100%;
-  height: 40px;
+  height: 4vh;
   color: #87bb34;
 }
 
@@ -71,7 +72,7 @@ h2 {
   box-shadow: none;
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 1vw;
   padding: 0 10px;
   z-index: 1;
   color: black;
@@ -81,7 +82,7 @@ h2 {
   top: 0;
   left: 0;
   line-height: 40px;
-  font-size: 18px;
+  font-size: 1.5vw;
   padding: 0 10px;
   display: block;
   transition: 0.5s;
@@ -98,7 +99,7 @@ h2 {
   position: absolute;
   bottom: 0;
   display: block;
-  width: 50%;
+  width: 45vw;
   height: 2px;
   background: #87bb34;
   transition: 0.5s;
@@ -130,19 +131,210 @@ h2 {
 }
 
 input[type="submit"] {
+  width: 50vw;
   border: none;
   padding: 7px 35px;
   cursor: pointer;
   outline: none;
   background: #87bb34;
   color: black;
-  font-size: 18px;
+  font-size: 1.5vw;
   border-radius: 2px;
 }
 canvas {
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  width: 50vw;
   border: solid 2px #87bb34;
   background: #fff;
 }
+
+#canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 200px;
+  border: solid 2px #87bb34;
+  height: 150px;
+}
+#capture {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 200px;
+  border: solid 2px #87bb34;
+  height: 150px;
+}
+
+/* MISE EN PAGE*/
+/* .mise-en-page {
+} */
+.bloc-mise-en-page {
+  margin: 10px;
+  flex: 1 0 0px;
+  min-width: 200px;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 0px) and (max-width: 1200px) {
+  body h2 {
+    text-align: center;
+  }
+  .container {
+    width: 80vw;
+  }
+  .container h2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    font-size: 5vw;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .container .row100 {
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 3px #87bb34;
+    padding: 2.5%;
+    position: relative;
+    width: 100%;
+    display: grid;
+    margin: 0px;
+    /* grid-template-columns: repeat(auto-fit, minmax(2000px, 1fr)); */
+  }
+
+  .container .row100 .col {
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    margin: 40px 0 40px;
+    transition: 0.5s;
+  }
+
+  .container .row100 .inputBox {
+    position: relative;
+    width: 100%;
+    height: 4vh;
+    color: #87bb34;
+  }
+
+  .container .row100 .inputBox input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 2.5vw;
+    padding: 0 10px;
+    z-index: 1;
+    color: black;
+  }
+  .container .row100 .inputBox .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 30px;
+    font-size: 2.5vw;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+
+  .container .row100 .inputBox input:focus + .text,
+  .container .row100 .inputBox input:valid + .text {
+    top: -35px;
+    left: -10px;
+  }
+
+  .container .row100 .inputBox .line {
+    width: 80vw;
+    height: 2px;
+    background: #87bb34;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+  }
+
+  .container .row100 .inputBox input:focus ~ .line,
+  .container .row100 .inputBox input:valid ~ .line {
+    height: 100%;
+  }
+
+  .container .row100 .inputBox .textarea {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+  }
+
+  .container .row100 .inputBox textarea:focus ~ .line,
+  .container .row100 .inputBox textarea:valid ~ .line {
+    top: -35px;
+    left: -10px;
+  }
+
+  .container .row100 .inputBox textarea:focus + .line,
+  .container .row100 .inputBox textarea:valid + .line {
+    height: 100%;
+  }
+
+  input[type="submit"] {
+    width: 75vw;
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #87bb34;
+    color: black;
+    font-size: 1.5vw;
+    border-radius: 2px;
+  }
+  canvas {
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    width: 50vw;
+    border: solid 2px #87bb34;
+    background: #fff;
+  }
+
+  #canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 200px;
+    border: solid 2px #87bb34;
+    height: 150px;
+    margin-bottom: 2%;
+  }
+  #capture {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 200px;
+    border: solid 2px #87bb34;
+    height: 150px;
+  }
+
+  /* .mise-en-page {
+  } */
+  .bloc-mise-en-page {
+    margin: 10px;
+    flex: 1 0 0px;
+    min-width: 200px;
+  }
+}
+
 /* couleur afpa #87bb34; vert claire	
 #44a33d;  vert sombre
 #cf004b; fushia (rose) */ ;
